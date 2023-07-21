@@ -7,3 +7,18 @@ To install, simply run
 ```bash
 sudo dnf install docker-compose
 ```
+## Configuring
+To ensure this works, in docker-compose.yml, you need to change the "image" variable to whatever you named the image you built. You will also need to run 
+```bash
+xhost +
+```
+to ensure everything runs properly.
+
+## Running
+Finnaly, you will run
+```bash
+cd /path/to/docker-compose.yml/
+docker-compose up --d
+docker-compose exec ros2 bash
+```
+
